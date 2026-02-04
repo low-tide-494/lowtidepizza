@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LOW TIDE — Pizza by the Sea | Banna Beach, Kerry</title>
+  <meta name="description" content="LOW TIDE serves handmade focaccia & pizza by the slice at Banna Beach, Kerry. Open evenings May–Sept, weekends year-round." />
+  <meta property="og:title" content="LOW TIDE — Pizza by the Sea" />
+  <meta property="og:description" content="Handmade focaccia & pizza by the slice at Banna Beach, Kerry." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#071a1d;
+      --card:#0b2428;
+      --ink:#f6f1e6;
+      --muted:#cbbfae;
+      --sea:#2aa9b8;
+      --tomato:#d44b3f;
+      --line:rgba(246,241,230,.14);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--ink);
+      background: radial-gradient(1200px 800px at 70% 10%, rgba(42,169,184,.25), transparent 55%),
+                  radial-gradient(900px 700px at 20% 30%, rgba(212,75,63,.14), transparent 60%),
+                  var(--bg);
+      line-height:1.5;
+    }
+    a{color:var(--ink); text-decoration:none}
+    .wrap{max-width:1080px; margin:0 auto; padding:24px}
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 18px; border:1px solid var(--line); border-radius:999px;
+      background: rgba(11,36,40,.65); backdrop-filter: blur(10px);
+      position:sticky; top:14px; z-index:10;
+    }
+    .brand{display:flex; gap:10px; align-items:center; font-weight:800; letter-spacing:.06em}
+    .dot{width:10px; height:10px; border-radius:99px; background:var(--sea); box-shadow:0 0 0 4px rgba(42,169,184,.18)}
+    .navlinks{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    .navlinks a{padding:8px 10px; border-radius:999px; border:1px solid transparent}
+    .navlinks a:hover{border-color:var(--line); background:rgba(246,241,230,.06)}
+    .cta{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:10px 14px; border-radius:999px;
+      background: linear-gradient(90deg, rgba(42,169,184,.95), rgba(42,169,184,.65));
+      color:#031012; font-weight:800;
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .hero{
+      padding:52px 0 26px;
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:22px;
+      align-items:stretch;
+    }
+    @media (max-width: 880px){ .hero{grid-template-columns:1fr; padding-top:28px} }
+    .card{
+      border:1px solid var(--line);
+      background: rgba(11,36,40,.55);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:24px;
+      overflow:hidden;
+    }
+    .kicker{color:var(--muted); letter-spacing:.22em; text-transform:uppercase; font-size:12px}
+    h1{margin:10px 0 8px; font-size:48px; line-height:1.05; letter-spacing:.01em}
+    @media (max-width: 520px){ h1{font-size:40px} }
+    .tag{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px; border-radius:999px;
+      background: rgba(246,241,230,.08);
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-weight:700;
+      margin-top:10px;
+    }
+    .tag b{color:var(--ink)}
+    .hero p{color:rgba(246,241,230,.86); font-size:16px; max-width:52ch}
+    .buttons{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; justify-content:center; align-items:center; gap:10px;
+      padding:12px 16px; border-radius:14px; border:1px solid var(--line);
+      background: rgba(246,241,230,.06);
+      font-weight:800;
+    }
+    .btn:hover{background: rgba(246,241,230,.10)}
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(212,75,63,.95), rgba(212,75,63,.75));
+      border-color: rgba(255,255,255,.10);
+      color:#180403;
+    }
+    .grid{
+      display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; margin-top:14px;
+    }
+    @media (max-width: 920px){ .grid{grid-template-columns:1fr} }
+    .mini{
+      padding:16px; border-radius:18px;
+      border:1px solid var(--line); background: rgba(246,241,230,.05);
+    }
+    .mini h3{margin:0 0 6px; font-size:14px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+    .mini p{margin:0; font-weight:750}
+    section{padding:10px 0 0}
+    h2{margin:0 0 8px; font-size:28px}
+    .menu{
+      display:grid; grid-template-columns: 1fr 1fr; gap:14px;
+    }
+    @media (max-width: 880px){ .menu{grid-template-columns:1fr} }
+    .item{
+      display:flex; justify-content:space-between; gap:14px;
+      padding:14px 14px;
+      border:1px solid var(--line); border-radius:18px;
+      background: rgba(246,241,230,.04);
+    }
+    .item .name{font-weight:900}
+    .item .desc{color:rgba(246,241,230,.72); font-size:14px; margin-top:4px}
+    .price{font-weight:900; color:var(--muted); white-space:nowrap}
+    .split{
+      display:grid; grid-template-columns: 1fr 1fr; gap:14px;
+    }
+    @media (max-width: 880px){ .split{grid-template-columns:1fr} }
+    .fine{color:rgba(246,241,230,.72); font-size:13px}
+    .footer{
+      margin-top:24px; padding:18px; border-radius:18px;
+      border:1px solid var(--line); background: rgba(11,36,40,.45);
+      display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .badge{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px; border-radius:999px;
+      border:1px solid var(--line); background: rgba(246,241,230,.06);
+      color:var(--muted); font-weight:800;
+    }
+    .pill{color:var(--ink)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand"><span class="dot"></span> LOW TIDE</div>
+      <nav class="navlinks">
+        <a href="#menu">Menu</a>
+        <a href="#hours">Hours</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#contact">Order & Enquiries →</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="card">
+        <div class="kicker">Banna Beach, Kerry</div>
+        <h1>Pizza by the sea.</h1>
+        <p>
+          Handmade focaccia & pizza <b>by the slice</b> — baked hot, finished fast,
+          and made for beach evenings.
+        </p>
+        <div class="tag"><b>LOW TIDE</b> <span>—</span> focaccia & pizza</div>
+        <div class="buttons">
+          <a class="btn primary" href="#menu">See the menu</a>
+          <a class="btn" href="#hours">Today’s hours</a>
+          <!-- Replace the Instagram URL below -->
+          <a class="btn" href="https://instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+
+        <div class="grid">
+          <div class="mini">
+            <h3>Fast</h3>
+            <p>Pre-baked slabs, finished to order</p>
+          </div>
+          <div class="mini">
+            <h3>Handmade</h3>
+            <p>Olive oil dough, cold ferment</p>
+          </div>
+          <div class="mini">
+            <h3>Beach-ready</h3>
+            <p>Easy slices, minimal wait</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h2 id="hours">Hours</h2>
+        <div class="item">
+          <div>
+            <div class="name">Mon–Fri</div>
+            <div class="desc">Evenings</div>
+          </div>
+          <div class="price">6–9pm</div>
+        </div>
+        <div class="item" style="margin-top:12px">
+          <div>
+            <div class="name">Sat–Sun</div>
+            <div class="desc">From noon</div>
+          </div>
+          <div class="price">12–9pm</div>
+        </div>
+        <p class="fine" style="margin-top:12px">
+          Weather dependent on extreme days. Follow Instagram for live updates.
+        </p>
+
+        <h2 id="location" style="margin-top:18px">Location</h2>
+        <p class="fine">
+          <b>Banna Beach</b> (near Ardfert), Co. Kerry. <br/>
+          Add your exact pitch / landmark here.
+        </p>
+
+        <!-- Replace the map link with your exact Google Maps pin -->
+        <a class="btn" href="https://maps.google.com" target="_blank" rel="noreferrer">Open in Google Maps</a>
+      </aside>
+    </main>
+
+    <section id="menu" class="card">
+      <h2>Menu</h2>
+      <p class="fine">Pizza al taglio — sold by the slice. Limited menu for speed & consistency.</p>
+
+      <div class="menu">
+        <div class="item">
+          <div>
+            <div class="name">Margherita</div>
+            <div class="desc">Tomato · mozzarella · basil</div>
+          </div>
+          <div class="price">€5</div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Roasted Veg & Pesto 🌿</div>
+            <div class="desc">Courgette · pepper · red onion</div>
+          </div>
+          <div class="price">€6</div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Garlic Bianca</div>
+            <div class="desc">Mozzarella · ricotta · rosemary</div>
+          </div>
+          <div class="price">€5.5</div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Mushroom & Thyme</div>
+            <div class="desc">Taleggio · black pepper</div>
+          </div>
+          <div class="price">€6.5</div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Spicy Tomato & Hot Honey 🔥</div>
+            <div class="desc">Chilli · mozzarella</div>
+          </div>
+          <div class="price">€6</div>
+        </div>
+
+        <div class="item">
+          <div>
+            <div class="name">Slice + Drink</div>
+            <div class="desc">Perfect beach combo</div>
+          </div>
+          <div class="price">€8–€9</div>
+        </div>
+      </div>
+
+      <div class="split" style="margin-top:14px">
+        <div class="mini">
+          <h3>Extras</h3>
+          <p class="fine">Garlic aioli €1.50 · Chilli oil €1 · Extra cheese €2</p>
+        </div>
+        <div class="mini">
+          <h3>Drinks</h3>
+          <p class="fine">Sparkling water €2.50 · San Pellegrino €3</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:14px">
+      <h2>Contact</h2>
+      <p class="fine">
+        For private events, catering, or bank/licensing documents, email or call.
+      </p>
+
+      <div class="split">
+        <div class="mini">
+          <h3>Email</h3>
+          <!-- Replace with your real email -->
+          <p><a class="pill" href="mailto:hello@lowtidepizza.ie">hello@lowtidepizza.ie</a></p>
+        </div>
+        <div class="mini">
+          <h3>Phone</h3>
+          <!-- Replace with your real phone -->
+          <p><a class="pill" href="tel:+353000000000">+353 (0)00 000 0000</a></p>
+        </div>
+      </div>
+
+      <p class="fine" style="margin-top:10px">
+        Prefer DMs? Link your Instagram above.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div class="badge">LOW TIDE <span class="pill">— pizza by the sea</span></div>
+      <div class="fine">© <span id="y"></span> LOW TIDE</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
